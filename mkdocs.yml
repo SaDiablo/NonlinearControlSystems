@@ -1,0 +1,8 @@
+site_name: Nonlinear Control Systems
+
+theme: readthedocs
+
+pages:
+    - Home: index.md
+    - List of laboratories: SourceCodes.md
+    - 3D Models: 3DModels.md
