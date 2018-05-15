@@ -4,5 +4,7 @@ theme: readthedocs
 
 pages:
     - Home: index.md
-    - List of laboratories: SourceCodes.md
-    - 3D Models: 3DModels.md
+    - Lab 01: Lab_01.md
+    - Lab 02: Lab_02.md
+    - Lab 03: Lab_03.md
+    - Lab 04: Lab_04.md
