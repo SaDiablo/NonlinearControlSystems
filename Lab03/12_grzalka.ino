@@ -52,15 +52,15 @@ void loop()
 	temp_c = A0 + A1 * temp + A2 * pow(temp, 2) + A3 * pow(temp, 3);
 
 	e = set_temp - temp_c;
-	integ = integ + e * dt;
+	integ = integ + (e * dt);
 	der = (e - e_pop) / dt;
 	e_pop = e;
 	e = constrain(e, -10, 10);
 	e = map(e, -10, 10, -255, 255); 
-	u = Kp * e; //Kp
-	u = u + Ki * integral; //Ki
-	u = u + Kd * derivative; //Kd
-	u = floor(u);
+	up = Kp * e; 					//Kp
+	ui = Ki * integral; 			//Ki
+	ud = Kd * derivative; 			//Kd
+	u = floor(up + ui + ud);
 	
 	if(u <= 255 && u >= 0) { analogWrite(HEATER_0, u); }
 	else if(u > 255) { analogWrite(HEATER_0, 255); }
