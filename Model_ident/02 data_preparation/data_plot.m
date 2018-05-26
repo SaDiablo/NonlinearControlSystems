@@ -32,9 +32,8 @@ set.object_moved = iddata(set.output_moved, set.input, (dt/1000), 'InputUnit', {
 set.object_filtered_moved = iddata(set.output_filtered_moved, set.input, (dt/1000), 'InputUnit', {'PWM value (0-255)', 'PWM value (0-255)'}, 'OutputUnit', 'Celsius');
 
 %% turn set into data.set
-data.set = set;
-%data.set_1 = set_1;
-%data.set_2 = set_2;
+%data.set_ = set;
+data.set_3 = set;
 
 %% plot
 close all

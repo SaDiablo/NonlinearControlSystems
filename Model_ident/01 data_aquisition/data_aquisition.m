@@ -21,22 +21,20 @@ fopen(obj1);
 set(obj1, 'BaudRate', 57600);
 
 % Communicating with instrument object, obj1.
-seconds = 60;
+seconds = 360;
 dt = 20; %ms
 samples = seconds * (1000/dt);
 
-data = string(zeros(samples,1));
-time = zeros(samples,1);
+data_str = string(zeros(samples, 1));
+time = zeros(samples, 1);
 i = 1;
-%try
+
 while(i <= samples)
    tic
-   data(i) = fscanf(obj1);
+   data_str(i) = fscanf(obj1);
    time(i) = toc;
    i = i + 1;
 end
-%catch err
-%end
 
 %% Disconnect and Clean Up
 
